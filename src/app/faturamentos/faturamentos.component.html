@@ -1,3 +1,12 @@
-<p>
-  faturamentos works!
-</p>
+<form action='faturamentos/criar' method='post'>
+  <label for="data">Data</label>
+  <input id="data" type='date' name='data_fim' required>
+  <input type='submit' value="Novo Faturamento">
+</form>
+
+<h3>Faturamentos</h3>
+<mat-list>
+  <mat-list-item *ngFor="let faturamento of faturamentos">
+    <h4 mat-row>{{faturamento.data_inicio}} | {{faturamento.data_fim}}</h4>
+  </mat-list-item>
+</mat-list>
