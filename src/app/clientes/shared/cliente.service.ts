@@ -15,4 +15,9 @@ export class ClienteService {
     return this.http.get<Cliente[]>(this.path);
   }
 
+  getCliente(cliente): Observable<Cliente[]> {
+    const options = { params: cliente = cliente };
+    return this.http.get<Cliente[]>(this.path, options);
+  }
+
 }

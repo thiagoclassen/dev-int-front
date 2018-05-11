@@ -21,4 +21,10 @@ export class ClientesComponent implements OnInit {
       .subscribe(response => this.clientes = response);
   }
 
+  private getClienteByName(cliente) {
+    cliente = '';
+    this.clienteService
+      .getCliente(cliente)
+      .subscribe(response => this.clientes = response);
+  }
 }
