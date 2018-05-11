@@ -14,6 +14,7 @@ import { EnderecosComponent } from './enderecos/enderecos.component';
 import { FaturamentosComponent } from './faturamentos/faturamentos.component';
 import { PedidosComponent } from './pedidos/pedidos.component';
 import { ProdutosComponent } from './produtos/produtos.component';
+import { PdfComponent } from './pdf/pdf.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { ProdutosComponent } from './produtos/produtos.component';
     EnderecosComponent,
     FaturamentosComponent,
     PedidosComponent,
-    ProdutosComponent
+    ProdutosComponent,
+    PdfComponent
   ],
   imports: [
     BrowserModule,

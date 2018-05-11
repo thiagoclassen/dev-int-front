@@ -7,6 +7,7 @@ import { EnderecosComponent } from './enderecos/enderecos.component';
 import { FaturamentosComponent } from './faturamentos/faturamentos.component';
 import { PedidosComponent } from './pedidos/pedidos.component';
 import { ProdutosComponent } from './produtos/produtos.component';
+import { PdfComponent } from './pdf/pdf.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/clientes', pathMatch: 'full' },
@@ -15,7 +16,8 @@ const routes: Routes = [
   { path: 'enderecos', component: EnderecosComponent },
   { path: 'faturamentos', component: FaturamentosComponent },
   { path: 'pedidos', component: PedidosComponent },
-  { path: 'produtos', component: ProdutosComponent }
+  { path: 'produtos', component: ProdutosComponent },
+  { path: 'pdf', component: PdfComponent }
 ];
 
 @NgModule({
