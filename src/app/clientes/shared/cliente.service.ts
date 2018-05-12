@@ -16,8 +16,17 @@ export class ClienteService {
   }
 
   getCliente(cliente): Observable<Cliente[]> {
-    const options = { params: cliente = cliente };
-    return this.http.get<Cliente[]>(this.path, options);
+    return this.http.get<Cliente[]>(this.path + '/' + cliente);
+  }
+
+  getPedidosComDetalhes(cliente, scope='ultimos_pedidos_faturados'): Observable<any[]> {
+    const options = { params: { scope: scope } };
+    return this.http.get<any[]>(this.path + '/' + cliente + "/pedidos_com_detalhes", options);
+  }
+
+  getPedidosComDetalhesPaginado(cliente, limit, page, scope='ultimos_pedidos_faturados'): Observable<any[]> {
+    const options = { params: { limit: limit, page: page, scope: scope } };
+    return this.http.get<any[]>(this.path + '/' + cliente + "/pedidos_com_detalhes", options);
   }
 
 }

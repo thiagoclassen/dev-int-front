@@ -9,10 +9,14 @@ export class DetalhesPedidosService {
 
   path = 'http://localhost:3000/detalhesPedidos';
 
-
   constructor(private http: HttpClient) { }
 
   getDetalhesPedido(): Observable<DetalhesPedido[]> {
+    return this.http.get<DetalhesPedido[]>(this.path);
+  }
+
+  getDetalhesDeUmPedido(pedido): Observable<DetalhesPedido[]> {
+    const options = { params: { pedido_id: pedido } };
     return this.http.get<DetalhesPedido[]>(this.path);
   }
 
