@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 import { Faturamento } from './faturamento';
-import { DetalhesPedido } from '../../detalhes-pedidos/shared/detalhes-pedido';
 import { Observable } from 'rxjs/Observable';
 
 @Injectable()
@@ -26,12 +25,16 @@ export class FaturamentoService {
   }
 
   getResumoProdutoMes(produto): Observable<any[]> {
-    const options = { params: { produto_id: produto } };
+    const options = {
+      params: { produto_id: produto }
+    };
     return this.http.get<any[]>(this.path + "/resumo_produto_mes", options);
   }
 
   getResumoProdutoAno(produto): Observable<any[]> {
-    const options = { params: { produto_id: produto } };
+    const options = {
+      params: { produto_id: produto }
+    };
     return this.http.get<any[]>(this.path + "/resumo_produto_ano", options);
   }
 }

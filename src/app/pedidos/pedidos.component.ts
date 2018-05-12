@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Pedido } from './shared/pedido';
-import { PedidosService } from './shared/pedidos.service';
+import { PedidoService } from './shared/pedido.service';
 
 @Component({
   selector: 'app-pedidos',
-  providers: [PedidosService],
+  providers: [PedidoService],
   templateUrl: './pedidos.component.html',
   styleUrls: ['./pedidos.component.scss']
 })
@@ -12,11 +12,11 @@ export class PedidosComponent implements OnInit {
 
   pedidos: Pedido[];
 
-  constructor(private pedidoService: PedidosService) { }
+  constructor(private pedidoService: PedidoService) { }
 
   ngOnInit() {
     this.pedidoService
-      .getPedidos()
+      .getPedidosPaginado(1000, 1)
       .subscribe(response => this.pedidos = response);
   }
 

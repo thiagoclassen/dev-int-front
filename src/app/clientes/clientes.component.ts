@@ -17,7 +17,7 @@ export class ClientesComponent implements OnInit {
   ngOnInit() {
 
     this.clienteService
-      .getClientes()
+      .getClientesPaginado(1000, 1)
       .subscribe(response => this.clientes = response);
   }
 

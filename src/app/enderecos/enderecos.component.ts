@@ -16,7 +16,7 @@ export class EnderecosComponent implements OnInit {
 
   ngOnInit() {
     this.enderecosService
-      .getEnderecos()
+      .getEnderecosPaginado(1000, 1)
       .subscribe(response => this.enderecos = response);
   }
 

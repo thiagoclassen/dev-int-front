@@ -1,13 +1,13 @@
 export class Pedido {
 
-    pedidoId: number;
-    clienteId: number;
+    pedido_id: number;
+    cliente_id: number;
     data_pedido: Date;
 
-    constructor(pedidoId: number, clienteId: number, data_pedido: Date) {
+    constructor(pedido_id: number, cliente_id: number, data_pedido: Date) {
 
-        this.pedidoId = pedidoId;
-        this.clienteId = clienteId;
+        this.pedido_id = pedido_id;
+        this.cliente_id = cliente_id;
         this.data_pedido = data_pedido;
 
     }

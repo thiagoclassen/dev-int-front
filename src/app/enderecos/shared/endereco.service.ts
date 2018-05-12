@@ -14,5 +14,13 @@ export class EnderecoService {
   getEnderecos(): Observable<Endereco[]> {
     return this.http.get<Endereco[]>(this.path);
   }
-
+  getEnderecosPaginado(limit, page): Observable<Endereco[]> {
+    const options = {
+      params: {
+        limit: limit,
+        page: page
+      }
+    };
+    return this.http.get<Endereco[]>(this.path, options);
+  }
 }
