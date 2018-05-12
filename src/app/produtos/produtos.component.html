@@ -1,8 +1,6 @@
 <mat-list>
     <mat-list-item *ngFor="let produto of produtos">
-      <h4 mat-row>{{produto.produto_id}}-</h4>
-      <h4 mat-row>{{produto.descricao}}-</h4>
-      <h4 mat-row>{{produto.preco}}</h4>
+      <p mat-row>{{produto.produto_id}} | {{produto.descricao}} | {{produto.preco}}</p>
     </mat-list-item>
   </mat-list>
   

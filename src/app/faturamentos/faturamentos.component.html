@@ -7,6 +7,6 @@
 <h3>Faturamentos</h3>
 <mat-list>
   <mat-list-item *ngFor="let faturamento of faturamentos">
-    <p mat-row>{{faturamento.data_inicio}} | {{faturamento.data_fim}}</p>
+    <p mat-row>{{faturamento.data_inicio || "null"}} | {{faturamento.data_fim}}</p>
   </mat-list-item>
 </mat-list>

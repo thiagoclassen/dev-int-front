@@ -1,7 +1,5 @@
 <mat-list>
   <mat-list-item *ngFor="let pedido of pedidos">
-    <h4 mat-row>{{pedido.pedidoId}}-</h4>
-    <h4 mat-row>{{pedido.clienteId}}-</h4>
-    <h4 mat-row>{{pedido.data_pedido | date}}</h4>
+    <p mat-row>{{pedido.pedido_id}} | {{pedido.cliente_id}} | {{pedido.data_pedido}}</p>
   </mat-list-item>
 </mat-list>

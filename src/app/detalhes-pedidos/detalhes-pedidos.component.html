@@ -1,3 +1,5 @@
-<p>
-  detalhes-pedidos works!
-</p>
+<mat-list>
+  <mat-list-item *ngFor="let detalhe of detalhesPedidos">
+    <p mat-row>{{detalhe.pedido_id}} | {{detalhe.produto_id}} | {{detalhe.quantidade}} | {{detalhe.preco}}</p>
+  </mat-list-item>
+</mat-list>
